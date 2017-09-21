@@ -13,6 +13,7 @@ p.close()
 
 p = Popen(['gdb', fpath, 'core', '--batch', '-ex', 'x/wx $sp'], stdin=PIPE, stdout=PIPE)
 data = p.stdout.readlines()
+print(data)
 retaddr = data[len(data)-1].split(':')[1].strip()
 print Pattern.offset(retaddr)
 p.wait()

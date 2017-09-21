@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -fno-stack-protector
+CFLAGS := -fno-stack-protector -no-pie
 
 bof: bof.c
 
